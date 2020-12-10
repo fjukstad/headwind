@@ -3,7 +3,7 @@
 <style>
 html, body {
     height: 100%;
-		font-size: 200px; font-family: 'Gotham';
+    font-family: 'Gotham';
 }
 .parent {
     width: 100%;
@@ -15,12 +15,24 @@ html, body {
     display: table-cell;
     vertical-align: middle;
 }
+ .header { 
+		font-size: 200px;
+}
+
+.details { 
+
+} 
 </style>
 <link rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
 </head>
 				<body>
 								<section class="parent">
-										<div class="child">MOTVIND</div>
+										<div class="child header">
+														MOTVIND </br>
+														<p style="font-size:50px">{{.Speed}} m/s ({{.Description}}) </small>
+										</div>
+								</section>
+								<section class="parent">
 								</section>
 				</body>
 </html>
