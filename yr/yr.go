@@ -1,7 +1,6 @@
 package yr
 
 import "errors"
-import "fmt"
 import "net/http"
 import "encoding/json"
 import "io/ioutil"
@@ -13,7 +12,26 @@ type Forecast struct {
 
 // Properties
 type Properties struct {
-	Meta Meta `json:"meta"`
+	Meta       Meta        `json:"meta"`
+	TimeSeries []TimeSerie `json:"timeseries"`
+}
+
+type TimeSerie struct {
+	Time string `json:"time"`
+	Data Data   `json:"data"`
+}
+
+type Data struct {
+	Instant Instant `json:"instant"`
+}
+
+type Instant struct {
+	Details Details `json:"details"`
+}
+
+type Details struct {
+	WindFromDirection float64 `json:"wind_from_direction"`
+	WindSpeed         float64 `json:"wind_speed"`
 }
 
 /// Meta
