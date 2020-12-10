@@ -12,11 +12,11 @@ type Forecast struct {
 
 // Properties
 type Properties struct {
-	Meta       Meta        `json:"meta"`
-	TimeSeries []TimeSerie `json:"timeseries"`
+	Meta       Meta         `json:"meta"`
+	TimeSeries []TimeSeries `json:"timeseries"`
 }
 
-type TimeSerie struct {
+type TimeSeries struct {
 	Time string `json:"time"`
 	Data Data   `json:"data"`
 }
