@@ -51,7 +51,7 @@ func main() {
 		}
 		tmpl.Execute(w, data)
 	})
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 type WindInfo struct {
