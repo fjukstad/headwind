@@ -21,12 +21,11 @@ func main() {
 
 		direction := fc.Properties.TimeSeries[0].Data.Instant.Details.WindFromDirection
 		speed := fc.Properties.TimeSeries[0].Data.Instant.Details.WindSpeed
-
 		//		bearing := 142.5
 
 		// to work
 		headwind := false
-		if direction < 90 && direction > 200 {
+		if direction < 90 || direction > 200 {
 			headwind = true
 		}
 
@@ -34,7 +33,7 @@ func main() {
 		if speed < 4 {
 			description = "lett motvind"
 		} else if speed < 8 {
-			description = "tung motvind"
+			description = "sterk motvind"
 		} else {
 			description = "kjør bil"
 		}

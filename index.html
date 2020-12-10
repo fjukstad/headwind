@@ -28,8 +28,12 @@ html, body {
 				<body>
 								<section class="parent">
 										<div class="child header">
-														MOTVIND </br>
+														{{ if .Headwind}}
+														MOTVIND  </br>
 														<p style="font-size:50px">{{.Speed}} m/s ({{.Description}}) </small>
+														{{ else }} 
+														IKKE MOTVIND 
+														{{ end }} 
 										</div>
 								</section>
 								<section class="parent">
