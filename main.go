@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+import "html/template"
+import "net/http"
+
 import "github.com/fjukstad/headwind/yr"
 
 func main() {
@@ -30,14 +33,28 @@ func main() {
 
 	fmt.Println("tail", tailwind)
 
-	speedDescription := ""
+	description := ""
 	if speed < 4 {
-		speedDescription = "lett"
+		description = "lett"
 	} else if speed < 8 {
-		speedDescription = "tung"
+		description = "tung"
 	} else {
-		speedDescription = "kjør bil"
+		description = "kjør bil"
 	}
 
-	fmt.Println(speedDescription)
+	fmt.Println(description)
+	tmpl := template.Must(template.ParseFiles("index.html"))
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		data := WindInfo{
+			Headwind:    headwind,
+			Description: description,
+		}
+		tmpl.Execute(w, data)
+	})
+	http.ListenAndServe(":8080", nil)
+}
+
+type WindInfo struct {
+	Headwind    bool
+	Description string
 }
