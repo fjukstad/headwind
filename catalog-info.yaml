@@ -10,4 +10,4 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: user:fjukstad
+  owner: fjukstad
