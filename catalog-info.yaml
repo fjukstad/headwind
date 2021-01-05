@@ -2,9 +2,11 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: headwind
+  description: | 
+    Headwind is a simple website that tells you if there's headwind on the way to work
   annotations:
     github.com/project-slug: fjukstad/headwind
 spec:
   type: website
   lifecycle: production
-  owner: bjornfjukstad@gmail.com
+  owner: fjukstad
