@@ -1,11 +1,10 @@
-- apiVersion: backstage.io/v1alpha1
-        kind: Component
-        metadata:
-                name: headwind
-                annotations:
-                        github.com/project-slug: fjukstad/headwind
-        spec:
-                type: website
-                lifecycle: production
-                owner: bjornfjukstad@gmail.com
-
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: headwind
+  annotations:
+    github.com/project-slug: fjukstad/headwind
+spec:
+  type: website
+  lifecycle: production
+  owner: bjornfjukstad@gmail.com
