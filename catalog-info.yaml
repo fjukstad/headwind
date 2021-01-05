@@ -6,6 +6,7 @@ metadata:
     Headwind is a simple website that tells you if there's headwind on the way to work
   annotations:
     github.com/project-slug: fjukstad/headwind
+    github.com/user-login: fjukstad
 spec:
   type: website
   lifecycle: production
